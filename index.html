@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa Sul Hihienização</title>
+
+    <!-- Link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Link para o AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link para seu CSS personalizado, se houver -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Início da Seção Hero (Cabeçalho) -->
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center text-white vh-100 position-relative" 
+    style="background-image: url('assets/images/1920-1080.svg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Sobreposição escura para melhor contraste com o texto -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <!-- Conteúdo principal da seção Hero -->
+        <div class="position-relative z-3" data-aos="fade-in" data-aos-duration="1000">
+            <!-- Logo da empresa -->
+            <img src="assets/images/logo-300-150.svg" alt="Logo da Rosa Sul Higienização" class="img-fluid mb-4" 
+            style="max-width:300px; height:auto;" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
+            <!-- Título principal -->
+            <h1 class="display-4 fw-bold" id="hero-title" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                Higienização Profissional de Estofados
+            </h1>
+            <!-- Descrição breve -->
+            <p class="lead mb-4" id="hero-description" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+                Cuide da saúde e bem-estar do seu lar com nossos serviços de limpeza e higienização profissional de estofados.
+            </p>
+            <!-- Botão de chamada para ação (CTA) -->
+            <a href="https://wa.me/555183336400?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20para%20higienização." 
+                class="btn btn-whatsapp btn-lg me-3" target="_blank" rel="noopener" aria-label="Solicitar orçamento via WhatsApp" 
+                data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+             <i class="bi bi-whatsapp me-2"></i>Quero um orçamento!
+            </a>
+            <!-- Botão de contato via telefone 
+            <a href="tel:+5547999999999" class="btn btn-outline-light btn-lg" aria-label="Ligar para empresa" 
+                data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
+                <i class="bi bi-telephone me-2"></i>Fale conosco
+            </a> -->
+        </div>
+    </header>
+    <!-- Fim da Seção Hero (Cabeçalho) -->
+
+   
+
+
+    <!-- Script para o AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000, // Duração da animação
+        easing: 'ease-in-out', // Efeito de transição
+    });
+    </script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Faz a rolagem ser suave
+            });
+        }
+    </script>
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Para jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Para Popper.js -->
+    <script src="assets/css/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- JS do Bootstrap -->
+    <script src="https://kit.fontawesome.com/24e65aedd5.js" crossorigin="anonymous"></script>
+    <!-- Link para seu JavaScript personalizado, se houver -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+    /* Cores principais */
+    --cor-primaria: #4192fc; /* Azul padrão */
+    --cor-fundo: #ffffff;
+    --cor-menu: #232323;
+    --cor-texto-principal: #EAEAEA;
+    --cor-texto-secundario: #B0B0B0;
+    /* Cores de título e hover */
+    --cor-titulo: var(--cor-texto-principal);
+    --cor-hover: #ffd700; /* Amarelo para hover */
+    /* Cores para botões */
+    --cor-botao: var(--cor-primaria);
+    --cor-botao-hover: #1877f2;
+    /* Cores específicas de ícones de redes sociais */
+    --cor-github: #171515;
+    --cor-linkedin: #0077b5;
+    --cor-instagram: #e1306c;
+    --cor-facebook: #1877f2;
+    --cor-whatsapp: #25d366;
+    /* Outras cores */
+    --cor-erro: #B22222;
+    --cor-sucesso: #2E8B57;
+    /* Tons de cinza */
+    --cor-cinza-claro: #A9A9A9;
+    --cor-cinza-medio: #6C757D;
+    --cor-cinza-escuro: #343A40;
+    --cor-cinza-mais-escuro: #212529;
+    /* Espaçamentos */
+    --espacamento-secao: 80px;
+}
+* {
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 0px;
+    overflow-x: hidden;
+    background: var(--cor-fundo);
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 87.5%; /* Base de 14px */
+}
+
+/* Compensação do scroll para a altura do cabeçalho */
+section {
+    scroll-margin-top: var(--espacamento-secao);
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 60px; /* Ajuste para dispositivos móveis */
+    }
+}
+
+/**************************************** SEÇÃO HERO ****************************************/
+.lead{
+    letter-spacing: 1.1px !important;
+    text-align: center;
+}
+/* Estilização personalizada para o botão de WhatsApp */
+.btn-whatsapp {
+    font-size: 1.125rem !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    border: 2px solid var(--cor-whatsapp) !important;
+    color: var(--cor-whatsapp) !important;
+    background-color: transparent !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out !important;
+}
+/* Ícone do WhatsApp */
+.btn-whatsapp i {
+    font-size: 1.5rem !important;
+}
+/* Efeito hover no botão */
+.btn-whatsapp:hover {
+    background-color: var(--cor-whatsapp) !important;
+    color: #fff !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5) !important;
+}
+/* Estilização para o botão com a classe btn-lg (tamanho grande) */
+.btn-whatsapp.btn-lg {
+    font-size: 1.25rem !important;
+    padding: 16px 32px !important;
+}
+/* Estilização para dispositivos móveis (telas menores) */
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        width: auto; /* Permite que o botão se ajuste ao conteúdo */
+        padding: 10px 20px !important; /* Ajuste do padding */
+        font-size: 1rem !important; /* Font menor para telas pequenas */
+        border-radius: 6px !important; /* Menor border-radius */
+        max-width: 80%; /* Limita o botão a 80% da largura da tela */
+        margin: 0 auto; /* Centraliza o botão */
+    }
+    /* Ajusta o ícone dentro do botão */
+    .btn-whatsapp i {
+        font-size: 1.2rem !important; /* Menor ícone */
+    }
+}
