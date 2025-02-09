@@ -1,109 +1,149 @@
 :root {
     /* Cores principais */
-    --cor-primaria: #4192fc; /* Azul padrão */
+    --cor-primaria: #4192fc;
+    --cor-secundaria: #1877f2;
     --cor-fundo: #ffffff;
     --cor-menu: #232323;
+
+    /* Cores para textos */
     --cor-texto-principal: #EAEAEA;
     --cor-texto-secundario: #B0B0B0;
-    /* Cores de título e hover */
-    --cor-titulo: var(--cor-texto-principal);
-    --cor-hover: #ffd700; /* Amarelo para hover */
+    --cor-paragrafo: #666666;
+
+    /* Cores para títulos e subtítulos */
+    --cor-titulo: #fff;
+    --cor-subtitulo: #444444;
+
     /* Cores para botões */
     --cor-botao: var(--cor-primaria);
-    --cor-botao-hover: #1877f2;
-    /* Cores específicas de ícones de redes sociais */
-    --cor-github: #171515;
-    --cor-linkedin: #0077b5;
-    --cor-instagram: #e1306c;
-    --cor-facebook: #1877f2;
-    --cor-whatsapp: #25d366;
-    /* Outras cores */
+    --cor-botao-hover: #0056b3;
+    --cor-botao-texto: #ffffff;
+
+    /* Cores para efeitos e interações */
+    --cor-hover: #ffd700;
+    --cor-hover-texto: #ffffff;
+    --cor-hover-borda: #ffcc00;
+
+    /* Cores para status (sucesso e erro) */
     --cor-erro: #B22222;
     --cor-sucesso: #2E8B57;
+    
     /* Tons de cinza */
     --cor-cinza-claro: #A9A9A9;
     --cor-cinza-medio: #6C757D;
     --cor-cinza-escuro: #343A40;
     --cor-cinza-mais-escuro: #212529;
+
     /* Espaçamentos */
     --espacamento-secao: 80px;
+    --espacamento-pequeno: 20px;
+    --espacamento-medio: 40px;
+    --espacamento-grande: 80px;
 }
-* {
-    text-decoration: none;
-    list-style-type: none;
-    border: none;
-    box-sizing: border-box;
-}
+
 
 body {
-    padding-top: 0px;
-    overflow-x: hidden;
     background: var(--cor-fundo);
     font-family: Poppins, sans-serif;
+    color: var(--cor-paragrafo); /* Define a cor padrão do texto */
 }
 
-html {
-    overflow-x: hidden;
-    font-size: 87.5%; /* Base de 14px */
+/* Botão personalizado */
+
+/* Títulos e subtítulos */
+h1 {
+    color: var(--cor-titulo);
 }
 
-/* Compensação do scroll para a altura do cabeçalho */
-section {
-    scroll-margin-top: var(--espacamento-secao);
+h2, h3, h4, h5, h6{
+    color: var(--cor-subtitulo) !important;
 }
 
-@media (max-width: 768px) {
-    section {
-        scroll-margin-top: 60px; /* Ajuste para dispositivos móveis */
-    }
+  /* Estilo dos cartões de serviço */
+  .service-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-cinza-claro);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/**************************************** SEÇÃO HERO ****************************************/
-.lead{
-    letter-spacing: 1.1px !important;
-    text-align: center;
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-/* Estilização personalizada para o botão de WhatsApp */
-.btn-whatsapp {
-    font-size: 1.125rem !important;
-    padding: 12px 24px !important;
-    border-radius: 8px !important;
-    border: 2px solid var(--cor-whatsapp) !important;
-    color: var(--cor-whatsapp) !important;
-    background-color: transparent !important;
+
+/* Estilo dos botões */
+.btn-custom {
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out !important;
+    text-decoration: none;
 }
-/* Ícone do WhatsApp */
-.btn-whatsapp i {
-    font-size: 1.5rem !important;
+
+/* Efeito dos botões ao passar o mouse */
+.btn-custom:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+    border-color: var(--cor-botao-hover);
+    transform: translateY(-3px);
 }
-/* Efeito hover no botão */
-.btn-whatsapp:hover {
-    background-color: var(--cor-whatsapp) !important;
-    color: #fff !important;
-    transform: scale(1.05) !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5) !important;
+
+.btn-custom i {
+    margin-right: 8px;
 }
-/* Estilização para o botão com a classe btn-lg (tamanho grande) */
-.btn-whatsapp.btn-lg {
-    font-size: 1.25rem !important;
-    padding: 16px 32px !important;
+
+.service-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-cinza-claro);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Garantir a mesma altura para todos os cards */
 }
-/* Estilização para dispositivos móveis (telas menores) */
-@media (max-width: 768px) {
-    .btn-whatsapp {
-        width: auto; /* Permite que o botão se ajuste ao conteúdo */
-        padding: 10px 20px !important; /* Ajuste do padding */
-        font-size: 1rem !important; /* Font menor para telas pequenas */
-        border-radius: 6px !important; /* Menor border-radius */
-        max-width: 80%; /* Limita o botão a 80% da largura da tela */
-        margin: 0 auto; /* Centraliza o botão */
-    }
-    /* Ajusta o ícone dentro do botão */
-    .btn-whatsapp i {
-        font-size: 1.2rem !important; /* Menor ícone */
-    }
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das imagens */
+.service-card img {
+    border-radius: 10px;
+    object-fit: cover; /* Garante que as imagens cubram o espaço sem distorcer */
+    height: 200px; /* Garantir a mesma altura para as imagens */
+}
+
+/* Estilo dos botões */
+.btn-custom {
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Efeito dos botões ao passar o mouse */
+.btn-custom:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+    border-color: var(--cor-botao-hover);
+    transform: translateY(-3px);
+}
+
+.btn-custom i {
+    margin-right: 8px;
 }
