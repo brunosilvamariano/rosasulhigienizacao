@@ -24,92 +24,46 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- Início da Seção Hero (Cabeçalho) -->
-    <header class="container-fluid d-flex align-items-center justify-content-center text-center text-white vh-100 position-relative" 
-    style="background-image: url('assets/images/1920-1080.svg'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-        <div class="position-relative z-3" data-aos="fade-in" data-aos-duration="1000">
-            <img src="assets/images/logo-300-150.svg" alt="Logo da Rosa Sul Higienização" class="img-fluid mb-4" 
-            style="max-width:300px; height:auto;" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
-            <h1 class="display-4 fw-bold" id="hero-title" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+     <!-- Início da Seção home -->
+     <section class="container-fluid d-flex align-items-center justify-content-center text-center text-white vh-100 hero-section" role="banner">
+        <!-- Sobreposição escura para melhor contraste com o texto -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Conteúdo principal da Seção Hero -->
+        <div class="position-relative z-3" role="presentation">
+            <!-- Logo da empresa com descrição acessível -->
+            <figure class="mb-4" data-aos="fade-down" data-aos-delay="200">
+                <img src="assets/images/logo-300-150.svg" alt="Logotipo da Empresa [Nome]" class="img-fluid" style="max-width:300px; height:auto;">
+                <figcaption class="sr-only">Logotipo da Empresa [Nome]</figcaption>
+            </figure>
+
+            <!-- Título principal -->
+            <h1 class="display-4 fw-bold" id="hero-title" data-aos="fade-up" data-aos-delay="400">
                 Higienização Profissional de Estofados
             </h1>
-            <p class="lead mb-4" id="hero-description" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+
+            <!-- Descrição breve -->
+            <p class="lead mb-4" id="hero-description" data-aos="fade-up" data-aos-delay="600">
                 Cuide da saúde e bem-estar do seu lar com nossos serviços de limpeza e higienização profissional de estofados.
             </p>
-            <a href="https://wa.me/555183336400?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o." 
-                class="btn-custom me-3" target="_blank" rel="noopener" aria-label="Solicitar orçamento via WhatsApp" 
-                data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-                <i class="bi bi-whatsapp me-2"></i>Quero um orçamento!
+
+            <!-- Botão de Chamada para Ação (CTA) -->
+            <a href="https://wa.me/55479999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20os%20serviços%20de%20higienização%20de%20estofados.%20Poderiam%20me%20informar%20os%20detalhes%20para%20sofás,%20colchões%20e%20cadeiras?%20Aguardo%20o%20orçamento.%20Obrigado!
+            "
+                class="btn btn-whatsapp btn-lg" 
+                target="_blank" 
+                rel="noopener" 
+                aria-label="Solicitar orçamento via WhatsApp" 
+                data-aos="zoom-in" 
+                data-aos-delay="800">
+                    <i class="bi bi-whatsapp me-2"></i> Peça um orçamento agora
             </a>
         </div>
-    </header>
-    <!-- Fim da Seção Hero (Cabeçalho) -->
+    </section>
+    <!-- Fim da Seção home -->
+
     
     <main>
-        <section id="servicos" class="container py-5 text-center" style="background-color: var(--cor-fundo);">
-            <h2 class="fw-bold" style="font-size: 2rem;">Nossos Serviços</h2>
-            <p class="text-muted mb-4" style="font-size: 1.1rem;">
-                Oferecemos soluções especializadas na higienização de sofás, camas, cadeiras e bancos de carro, com qualidade e eficiência para garantir o seu bem-estar.
-            </p>
-            
-            <div class="row g-4">
-                <!-- Serviço: Limpeza de Sofás -->
-                <div class="col-md-3">
-                    <div class="service-card p-4 text-center border rounded shadow-sm">
-                        <img src="assets/images/sofa-300-200.svg" 
-                             alt="Limpeza de Sofá" class="img-fluid mb-3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <h3 class="mt-3 fs-5" style="color: var(--cor-titulo);">Limpeza de Sofás</h3>
-                        <p class="text-muted" style="font-size: 1rem;">Elimine ácaros, sujeira e odores, trazendo frescor ao seu sofá.</p>
-                    </div>
-                </div>
-                
-                <!-- Serviço: Limpeza de Cadeiras -->
-                <div class="col-md-3">
-                    <div class="service-card p-4 text-center border rounded shadow-sm">
-                        <img src="assets/images/cadeira-300-200.svg" 
-                             alt="Limpeza de Cadeiras" class="img-fluid mb-3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <h3 class="mt-3 fs-5" style="color: var(--cor-titulo);">Limpeza de Cadeiras</h3>
-                        <p class="text-muted" style="font-size: 1rem;">Garantimos um ambiente mais saudável e confortável.</p>
-                    </div>
-                </div>
-                
-                <!-- Serviço: Limpeza de Camas -->
-                <div class="col-md-3">
-                    <div class="service-card p-4 text-center border rounded shadow-sm">
-                        <img src="assets/images/cama-300-200.svg" 
-                             alt="Limpeza de Camas" class="img-fluid mb-3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <h3 class="mt-3 fs-5" style="color: var(--cor-titulo);">Limpeza de Camas</h3>
-                        <p class="text-muted" style="font-size: 1rem;">Remoção de manchas e odores, proporcionando noites mais tranquilas.</p>
-                    </div>
-                </div>
-                
-                <!-- Serviço: Limpeza de Bancos de Carro -->
-                <div class="col-md-3">
-                    <div class="service-card p-4 text-center border rounded shadow-sm">
-                        <img src="assets/images/carro-300-200.svg" 
-                             alt="Limpeza de Bancos de Carro" class="img-fluid mb-3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <h3 class="mt-3 fs-5" style="color: var(--cor-titulo);">Limpeza de Bancos de Carro</h3>
-                        <p class="text-muted" style="font-size: 1rem;">Limpeza detalhada para eliminar sujeiras e odores dentro do seu veículo.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Botões -->
-            <div class="mt-4">
-                <a href="https://wa.me/555183336400?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o." 
-                   class="btn-custom me-3" target="_blank" rel="noopener" aria-label="Solicitar orçamento via WhatsApp">
-                    <i class="bi bi-whatsapp me-2"></i>Solicitar Orçamento
-                </a>
-                
-                <a href="#galeria-servicos" class="btn-custom" aria-label="Ver Galeria de Serviços">
-                    <i class="bi bi-images me-2"></i>Ver Galeria
-                </a>
-            </div>
-        </section>
-        
-        
-        
     </main>
     
     <!-- Scripts -->

@@ -1,149 +1,92 @@
 :root {
-    /* Cores principais */
-    --cor-primaria: #4192fc;
-    --cor-secundaria: #1877f2;
-    --cor-fundo: #ffffff;
-    --cor-menu: #232323;
-
+    /* Cor de fundo principal da página */
+    --cor-fundo: #f8f9fa;
+  
     /* Cores para textos */
-    --cor-texto-principal: #EAEAEA;
-    --cor-texto-secundario: #B0B0B0;
-    --cor-paragrafo: #666666;
-
-    /* Cores para títulos e subtítulos */
-    --cor-titulo: #fff;
-    --cor-subtitulo: #444444;
-
+    --cor-titulo: #212529; /* Cor dos títulos */
+    --cor-subtitulo: #495057; /* Cor dos subtítulos */
+    --cor-paragrafo: #6c757d; /* Cor dos parágrafos */
+  
     /* Cores para botões */
-    --cor-botao: var(--cor-primaria);
-    --cor-botao-hover: #0056b3;
-    --cor-botao-texto: #ffffff;
+    --cor-botao: #007bff; /* Cor de fundo do botão */
+    --cor-fonte-botao: #ffffff; /* Cor do texto dentro do botão */
+    --cor-hover: #0056b3; /* Cor do botão ao passar o mouse */
+  }
 
-    /* Cores para efeitos e interações */
-    --cor-hover: #ffd700;
-    --cor-hover-texto: #ffffff;
-    --cor-hover-borda: #ffcc00;
-
-    /* Cores para status (sucesso e erro) */
-    --cor-erro: #B22222;
-    --cor-sucesso: #2E8B57;
-    
-    /* Tons de cinza */
-    --cor-cinza-claro: #A9A9A9;
-    --cor-cinza-medio: #6C757D;
-    --cor-cinza-escuro: #343A40;
-    --cor-cinza-mais-escuro: #212529;
-
-    /* Espaçamentos */
-    --espacamento-secao: 80px;
-    --espacamento-pequeno: 20px;
-    --espacamento-medio: 40px;
-    --espacamento-grande: 80px;
+* {
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    box-sizing: border-box;
 }
-
-
 body {
-    background: var(--cor-fundo);
+    padding-top: 0px; /* Ajuste para header fixo */
+    overflow-x: hidden; /* Impede o scroll horizontal */
+    background: #ffffff38;
+}
+html {
+    overflow-x: hidden;
+    font-size: 87.5%; /* Base de 14px */
     font-family: Poppins, sans-serif;
-    color: var(--cor-paragrafo); /* Define a cor padrão do texto */
+}
+/* Compensação do scroll para a altura do cabeçalho */
+section {
+    scroll-margin-top: 80px; /* Ajuste este valor conforme a altura do cabeçalho */
 }
 
-/* Botão personalizado */
-
-/* Títulos e subtítulos */
-h1 {
-    color: var(--cor-titulo);
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 60px; /* Ajuste menor para dispositivos móveis */
+    }
+}
+/**************************************** SEÇÃO HOME ****************************************/
+.hero-section {
+    background-image: url('..//images/1920-1080.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-h2, h3, h4, h5, h6{
-    color: var(--cor-subtitulo) !important;
+.hero-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Melhor forma de adicionar sobreposição */
 }
-
-  /* Estilo dos cartões de serviço */
-  .service-card {
-    background-color: var(--cor-fundo);
-    border: 1px solid var(--cor-cinza-claro);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo dos botões */
-.btn-custom {
-    border: 2px solid var(--cor-primaria);
-    background-color: transparent;
-    color: var(--cor-primaria);
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 30px;
+/**************************************** BOTÃO ****************************************/
+/* Botão principal com classe específica */
+a.btn.btn-whatsapp {
+    background-color: var(--cor-botao);
+    color: var(--cor-fonte-botao);
+    border: 2px solid var(--cor-botao);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 50px; /* Botão arredondado */
     transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
 }
-
-/* Efeito dos botões ao passar o mouse */
-.btn-custom:hover {
-    background-color: var(--cor-primaria);
-    color: var(--cor-botao-texto);
-    border-color: var(--cor-botao-hover);
-    transform: translateY(-3px);
+/* Efeito de hover */
+a.btn.btn-whatsapp:hover,
+a.btn.btn-whatsapp:focus {
+    background-color: var(--cor-hover);
+    color: var(--cor-fonte-botao);
+    border-color: var(--cor-hover);
+    transform: translateY(-3px); /* Elevação ao passar o mouse */
 }
-
-.btn-custom i {
-    margin-right: 8px;
+/* Efeito de foco */
+a.btn.btn-whatsapp:active {
+    transform: translateY(1px); /* Leve depressão ao clicar */
 }
-
-.service-card {
-    background-color: var(--cor-fundo);
-    border: 1px solid var(--cor-cinza-claro);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 400px; /* Garantir a mesma altura para todos os cards */
+/* Ícone ao lado do texto */
+a.btn.btn-whatsapp i {
+    font-size: 20px; /* Ajuste do tamanho do ícone */
 }
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo das imagens */
-.service-card img {
-    border-radius: 10px;
-    object-fit: cover; /* Garante que as imagens cubram o espaço sem distorcer */
-    height: 200px; /* Garantir a mesma altura para as imagens */
-}
-
-/* Estilo dos botões */
-.btn-custom {
-    border: 2px solid var(--cor-primaria);
-    background-color: transparent;
-    color: var(--cor-primaria);
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-/* Efeito dos botões ao passar o mouse */
-.btn-custom:hover {
-    background-color: var(--cor-primaria);
-    color: var(--cor-botao-texto);
-    border-color: var(--cor-botao-hover);
-    transform: translateY(-3px);
-}
-
-.btn-custom i {
-    margin-right: 8px;
+/* Efeito de animação */
+[data-aos="zoom-in"] {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
 }
