@@ -18,11 +18,12 @@
     list-style-type: none;
     border: none;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 body {
     padding-top: 0px; /* Ajuste para header fixo */
     overflow-x: hidden; /* Impede o scroll horizontal */
-    background: #ffffff38;
 }
 html {
     overflow-x: hidden;
@@ -99,6 +100,7 @@ a.btn.btn-whatsapp i {
 /* Container para a seção */
 section.container {
     padding: 80px 0; /* Espaçamento superior e inferior */
+    overflow: hidden; /* Impede que o conteúdo saia da área visível */
 }
 
 /* Títulos principais da seção */
